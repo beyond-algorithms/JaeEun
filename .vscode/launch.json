@@ -5,6 +5,14 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Python",
+      "type": "python",
+      "request": "launch",
+      "env": {
+        "PYTHONPATH": "/Users/na/Project/python-algorithm/src;/Users/na/Project/python-algorithm/src/StdIOTestContainer;/Users/na/Project/python-algorithm/src/*;"
+      }
+    },
+    {
       "name": "Python: Current File",
       "type": "python",
       "request": "launch",
