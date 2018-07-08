@@ -1,7 +1,7 @@
 from unittest.mock import patch
 import unittest
 from io import StringIO
-import sys 
+import sys
 import logging
 
 logger = logging.getLogger()
@@ -11,29 +11,27 @@ logger.level = logging.DEBUG
 class StdIOTestContainer(unittest.TestCase):
     @staticmethod
     def formated(lines):
-        return list(map(lambda line: line.strip(),
-                        lines.strip().splitlines()))
+        return list(lines.strip().splitlines())
 
     @staticmethod
     def runFunction(user_input, func):
         with patch('builtins.input', side_effect=StdIOTestContainer.formated(user_input)), patch('sys.stdout', new_callable=StringIO) as out:
             func()
 
-        return out.getvalue().strip()
+        return out.getvalue()
 
     @staticmethod
     def runningTest(user_input, expected, func):
         actual = StdIOTestContainer.runFunction(user_input, func)
 
         testCase = unittest.TestCase()
-        testCase.assertEqual(actual, '\n'.join(
-            StdIOTestContainer.formated(expected)))
+        testCase.assertEqual(expected, actual)
 
-        StdIOTestContainer.testSimpleMsg("done")
+        StdIOTestContainer.info("done")
 
     @staticmethod
-    def testSimpleMsg(msg):
-        stream_handler = logging.StreamHandler(sys.stdout)
+    def info(msg):
+        stream_handler = logging.StreamHandler(sys.stderr)
         logger.addHandler(stream_handler)
 
         try:
