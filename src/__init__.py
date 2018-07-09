@@ -1,2 +1,2 @@
-from . import StdIOTestContainer
+from . import Test
 from . import algospot

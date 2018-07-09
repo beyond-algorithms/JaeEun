@@ -1,7 +1,7 @@
 import sys
 sys.path.append('.')
 import logging
-from src.StdIOTestContainer import StdIOTestContainer as T
+from src.Test import Test as T
 
 def solve():
     t = int(input().strip())

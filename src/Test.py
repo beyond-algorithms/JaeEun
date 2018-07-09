@@ -8,26 +8,26 @@ logger = logging.getLogger()
 logger.level = logging.DEBUG
 
 
-class StdIOTestContainer(unittest.TestCase):
+class Test(unittest.TestCase):
     @staticmethod
-    def formated(lines):
-        return list(lines.strip().splitlines())
+    def formatted(lines):
+        return list(lines.splitlines())
 
     @staticmethod
     def runFunction(user_input, func):
-        with patch('builtins.input', side_effect=StdIOTestContainer.formated(user_input)), patch('sys.stdout', new_callable=StringIO) as out:
+        with patch('builtins.input', side_effect=Test.formatted(user_input)), patch('sys.stdout', new_callable=StringIO) as out:
             func()
 
         return out.getvalue()
 
     @staticmethod
     def runningTest(user_input, expected, func):
-        actual = StdIOTestContainer.runFunction(user_input, func)
+        actual = Test.runFunction(user_input, func)
 
         testCase = unittest.TestCase()
         testCase.assertEqual(expected, actual)
 
-        StdIOTestContainer.info("done")
+        Test.info("done")
 
     @staticmethod
     def info(msg):
