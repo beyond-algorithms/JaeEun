@@ -1,0 +1,45 @@
+from src.Test import Test as T
+
+idx = -1
+
+
+def solve():
+    global idx
+    t = int(input().strip())
+    for i in range(t):
+        print(reverse(input().strip()))
+        idx = -1
+
+
+def reverse(origin):
+    global idx
+    idx += 1
+    current_char = origin[idx]
+
+    if current_char == 'x':
+        s1 = reverse(origin)
+        s2 = reverse(origin)
+        s3 = reverse(origin)
+        s4 = reverse(origin)
+
+        return current_char + s3 + s4 + s1 + s2
+
+    return current_char
+
+
+user_input = '''
+4
+w 
+xbwwb
+xbwxwbbwb
+xxwwwbxwxwbbbwwxxxwwbbbwwwwbb
+'''
+
+expected = '''
+w
+xwbbw
+xxbwwbbbw
+xxwbxwwxbbwwbwbxwbwwxwwwxbbwb
+'''
+
+T.runningTest(user_input.strip(), expected.lstrip(), solve)

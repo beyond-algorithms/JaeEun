@@ -1,0 +1,92 @@
+from src.Test import Test as T
+
+
+def main():
+    t = int(input().strip())
+    for i in range(t):
+        W = input().strip()
+        N = int(input().strip())
+
+        res = []
+        for _ in range(N):
+            word = input().strip()
+            if is_matched(W, word):
+                res.append(word)
+
+        res.sort()
+        for word in res:
+            print(word)
+
+
+def is_matched(W, S):
+    pos = 0
+
+    while pos < len(W) and pos < len(S) and (W[pos] == '?' or W[pos] == S[pos]):
+        pos += 1
+
+    if pos == len(W):
+        return pos == len(S)
+    if W[pos] == '*':
+        skip = 0
+        while pos + skip <= len(S):
+            if is_matched(W[pos + 1:], S[pos + skip:]):
+                return True
+            skip += 1
+
+    return False
+
+
+#
+# user_input = '''
+# 3
+# abc?
+# 3
+# abcd
+# abce
+# aaaa
+# ?abc
+# 3
+# aabc
+# babc
+# cabc
+# aaa?aa
+# 2
+# aaabaa
+# aaaqaa
+# '''
+#
+# expected = '''
+# abcd
+# abce
+# aabc
+# babc
+# cabc
+# aaabaa
+# aaaqaa
+# '''
+#
+# T.runningTest(user_input.strip(), expected.lstrip(), main)
+
+
+user_input = '''
+2
+he?p
+3
+help
+heap
+helpp
+*p*
+3
+help
+papa
+hello
+'''
+
+expected = '''
+heap
+help
+help
+papa
+'''
+
+T.runningTest(user_input.strip(), expected.lstrip(), main)

@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e15d9b6e-8a4d-44d8-9d02-a93010f717a4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StdIOTestContainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algospot/Picnic.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/algospot/Picnic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algospot/WordLength.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/algospot/WordLength.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/algospot/QuadTree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/algospot/Wildcard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +15,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Mercy.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Mercy.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/algospot/Mercy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+            <state relative-caret-position="190">
+              <caret line="10" column="16" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuadTree" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/algospot/QuadTree">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="8" selection-end-line="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Wildcard" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/algospot/Wildcard">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -37,13 +53,19 @@
         <option value="$PROJECT_DIR$/src/Test.py" />
         <option value="$PROJECT_DIR$/src/algospot/Picnic.py" />
         <option value="$PROJECT_DIR$/src/algospot/Mercy.py" />
+        <option value="$PROJECT_DIR$/src/algospot/QuadTree" />
+        <option value="$PROJECT_DIR$/src/algospot/Wildcard" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="796" />
     <option name="y" value="23" />
-    <option name="width" value="1469" />
+    <option name="width" value="1124" />
     <option name="height" value="1177" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -91,7 +113,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Mercy">
+  <component name="RunManager" selected="Python.Wildcard">
     <configuration name="Mercy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python-algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -128,12 +150,52 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="QuadTree" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="python-algorithm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/algospot" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/algospot/QuadTree" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="Wildcard" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="python-algorithm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/algospot" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/algospot/Wildcard" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list>
       <item itemvalue="Python.Picnic" />
       <item itemvalue="Python.Mercy" />
+      <item itemvalue="Python.QuadTree" />
+      <item itemvalue="Python.Wildcard" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Wildcard" />
+        <item itemvalue="Python.QuadTree" />
         <item itemvalue="Python.Mercy" />
         <item itemvalue="Python.Picnic" />
       </list>
@@ -153,18 +215,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1469" height="1177" extended-state="0" />
-    <editor active="true" />
+    <frame x="796" y="23" width="1124" height="1177" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23825732" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16772439" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32910246" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2529465" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3287037" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30462962" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32962963" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -196,10 +257,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="669" selection-start-line="669" selection-end-line="669" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/algospot/Mercy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        <state relative-caret-position="190">
+          <caret line="10" column="16" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algospot/QuadTree">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="8" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algospot/Wildcard">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
         </state>
       </provider>
     </entry>
