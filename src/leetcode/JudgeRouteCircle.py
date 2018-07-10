@@ -1,3 +1,6 @@
+import bisect
+
+
 class Solution:
     def judgeCircle(self, moves):
         """

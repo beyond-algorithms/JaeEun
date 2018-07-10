@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e15d9b6e-8a4d-44d8-9d02-a93010f717a4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/leetcode/JudgeRouteCircle.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/leetcode/MinCostClimbingStairs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/leetcode/TransposeMatrix.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/leetcode/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/leetcode/JudgeRouteCircle.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/JudgeRouteCircle.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,8 +43,8 @@
       <file leaf-file-name="JudgeRouteCircle.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/leetcode/JudgeRouteCircle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="475">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -136,7 +132,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Wildcard">
+  <component name="RunManager" selected="Python.JudgeRouteCircle">
+    <configuration name="JudgeRouteCircle" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="python-algorithm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/leetcode" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/leetcode/JudgeRouteCircle.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="Mercy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python-algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -214,9 +228,11 @@
       <item itemvalue="Python.Mercy" />
       <item itemvalue="Python.QuadTree" />
       <item itemvalue="Python.Wildcard" />
+      <item itemvalue="Python.JudgeRouteCircle" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.JudgeRouteCircle" />
         <item itemvalue="Python.Wildcard" />
         <item itemvalue="Python.QuadTree" />
         <item itemvalue="Python.Mercy" />
@@ -241,14 +257,14 @@
     <frame x="-1164" y="-551" width="1094" height="1268" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1724138" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1724138" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3296328" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30462962" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30401367" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32877883" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32877883" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -392,8 +408,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/leetcode/JudgeRouteCircle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="475">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
