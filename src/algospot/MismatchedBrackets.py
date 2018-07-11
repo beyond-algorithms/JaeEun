@@ -11,6 +11,8 @@ def pair(bracket):
     if bracket == ']':
         return '['
 
+    raise False
+
 
 def main():
     t = int(input().strip())
@@ -23,14 +25,12 @@ def main():
 
 def solve(stack, brackets):
     for bracket in brackets:
-        if not stack:
+        if not stack or bracket in '({[':
             stack.append(bracket)
             continue
 
         if stack[-1] == pair(bracket):
             stack.pop()
-        else:
-            stack.append(bracket)
 
     if not stack:
         return "YES"
