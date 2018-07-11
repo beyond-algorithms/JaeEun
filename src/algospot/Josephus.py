@@ -6,47 +6,28 @@ def main():
 
     for _ in range(t):
         N, K = list(map(int, input().strip().split()))
-        alive = N
-        grave = set()
 
-        print(" ".join(map(str, solve(N, K, alive, grave, 1))))
-
-        T.info("   ----     ")
+        print(" ".join(list(map(str, solve(N, K)))))
 
 
-def get_nextIdx(N, grave, idx, K):
-    step = K - 1
-    nextIdx = idx
+def solve(N, K):
+    p = [x for x in range(N + 1)]
+    T.info(p.pop(0))
+    alive = N
 
-    while True:
-        T.info(nextIdx)
+    idx = 1
+    while alive > 2:
+        idx = p.pop(idx) + 1
 
-        if step == 0:
-            return nextIdx
+        if idx == N:
+            idx = 1
 
-        if nextIdx == N:
-            return nextIdx
+        for _ in range(K - 1):
+            idx += 1
+            if idx == N:
+                idx = 0
 
-        step -= 1
-        nextIdx += 1
-
-
-
-def kill(idx, grave):
-    grave.add(idx)
-
-
-def solve(N, K, alive, grave, idx):
-    if alive == 2:
-        total = {x+1 for x in range(N)}
-        T.info("grave: " + str(grave))
-        return list(total - grave)
-
-    kill(idx, grave)
-    nextIdx = get_nextIdx(N, grave, idx, K)
-    T.info("returned: " + str(nextIdx))
-    T.info("--------")
-    return solve(N, K, alive - 1, grave, nextIdx)
+    return p
 
 
 user_input = '''
