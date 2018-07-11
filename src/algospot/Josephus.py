@@ -9,7 +9,7 @@ def main():
         alive = N
         grave = set()
 
-        print(" ".join(map(str, solve(N, K, alive, grave, 0))))
+        print(" ".join(map(str, solve(N, K, alive, grave, 1))))
 
         T.info("   ----     ")
 
@@ -21,15 +21,14 @@ def get_nextIdx(N, grave, idx, K):
     while True:
         T.info(nextIdx)
 
-
+        if step == 0:
+            return nextIdx
 
         if nextIdx == N:
-            nextIdx = 0
+            return nextIdx
 
-
-        if step == 0:
-            return nextIdx % N
-
+        step -= 1
+        nextIdx += 1
 
 
 
@@ -39,7 +38,7 @@ def kill(idx, grave):
 
 def solve(N, K, alive, grave, idx):
     if alive == 2:
-        total = {x for x in range(N)}
+        total = {x+1 for x in range(N)}
         T.info("grave: " + str(grave))
         return list(total - grave)
 
