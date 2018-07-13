@@ -11,23 +11,18 @@ def main():
 
 
 def solve(N, K):
-    p = [x for x in range(N + 1)]
-    T.info(p.pop(0))
     alive = N
 
-    idx = 1
+    p = [x for x in range(N)]
+
+    idx = 0
     while alive > 2:
-        idx = p.pop(idx) + 1
+        p.pop(idx)
 
-        if idx == N:
-            idx = 1
+        idx = (idx + K - 1) % len(p)
+        alive -= 1
 
-        for _ in range(K - 1):
-            idx += 1
-            if idx == N:
-                idx = 0
-
-    return p
+    return list(map(lambda x: x + 1, p))
 
 
 user_input = '''
