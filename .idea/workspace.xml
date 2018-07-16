@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e15d9b6e-8a4d-44d8-9d02-a93010f717a4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/leetcode/MaximumDepthOfBinaryTree.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/leetcode/PeakIndexInAMountainArray.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/leetcode/ReverseString.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/leetcode/EmployeeImportance.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/leetcode/LetterCasePermutation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algospot/Josephus.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/algospot/Josephus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/leetcode/ReverseString.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/ReverseString.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,11 +61,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReverseString.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReverseString.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/leetcode/ReverseString.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+            <state relative-caret-position="133">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeImportance.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/leetcode/EmployeeImportance.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
             </state>
           </provider>
         </entry>
@@ -118,11 +125,14 @@
         <option value="$PROJECT_DIR$/src/leetcode/PeakIndexInAMountainArray.py" />
         <option value="$PROJECT_DIR$/src/leetcode/MaximumDepthOfBinaryTree.py" />
         <option value="$PROJECT_DIR$/src/leetcode/ReverseString.py" />
+        <option value="$PROJECT_DIR$/src/leetcode/EmployeeImportance.py" />
+        <option value="$PROJECT_DIR$/src/leetcode/LetterCasePermutation.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="-2560" />
+    <option name="y" value="-360" />
     <option name="width" value="960" />
     <option name="height" value="1177" />
   </component>
@@ -303,8 +313,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="960" height="1177" extended-state="0" />
-    <editor active="true" />
+    <frame x="-2560" y="-360" width="960" height="1177" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28115016" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -679,8 +688,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/leetcode/ReverseString.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        <state relative-caret-position="133">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/leetcode/LetterCasePermutation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/leetcode/EmployeeImportance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
