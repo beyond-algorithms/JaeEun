@@ -35,7 +35,6 @@ class Solution:
 
         return ret
 
-
     def getImportance2(self, employees, id):
         """
         :type employees: Employee
