@@ -13,45 +13,31 @@ def main():
 
 
 def solve(N, pre, inorder):
-    left, root, right = inorder_LeftRootRight(pre, inorder)
+    mid = getMid(pre, inorder)
+    if not mid:
+        T.info(pre)
+        T.info(inorder)
+        T.info(" ")
 
-    if not root:
-        return left, right, root
+        return inorder
 
-    mid = len(left)
-    newPre = pre_LeftRootRight(pre[1: mid + 1], inorder[:mid])
-    newInorder = inorder_LeftRootRight(pre[mid + 1:], inorder[mid + 1:])
+    newPreLeft = pre[1:mid + 1]
+    newInorderLeft = inorder[:mid]
+    left = solve(N, newPreLeft, newInorderLeft)
 
-    return left + right + solve(N, newPre, newInorder)
+    newPreRight = pre[mid + 1:]
+    newInorderRight = inorder[mid + 1:]
+    right = solve(N, newPreRight, newInorderRight)
+
+    return [left] + [right] + [inorder[mid]]
 
 
-def inorder_LeftRootRight(pre, inorder):
+def getMid(pre, inorder):
     if not pre:
-        return None
+        return
 
-    root = pre[0]
-    mid = inorder.index(root)
-
-    left = inorder[:mid]
-    right = inorder[mid + 1:]
-
-    return left, root, right
-
-
-def pre_LeftRootRight(pre, inorder):
-    if not pre:
-        return None
-
-    T.info(pre)
-    T.info(inorder)
-
-    root = pre[0]
-    mid = inorder.index(root)
-
-    left = inorder[:mid]
-    len(left)
-
-    return pre[1 + mid:], root, pre[mid + 1:]
+    mid = pre[0]
+    return inorder.index(mid)
 
 
 user_input = '''
