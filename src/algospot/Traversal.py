@@ -9,7 +9,9 @@ def main():
         pre = list(map(int, input().strip().split()))
         inorder = list(map(int, input().strip().split()))
 
-        print(solve(N, pre, inorder))
+        # print(solve(N, pre, inorder))
+        solve(N, pre, inorder)
+        print("")
 
 
 def solve(N, pre, inorder):
