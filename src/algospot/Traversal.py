@@ -13,28 +13,28 @@ def main():
 
 
 def solve(N, pre, inorder):
-    mid = getMid(pre, inorder)
-    if not mid:
-        T.info(pre)
-        T.info(inorder)
-        T.info(" ")
-
-        return inorder
-
-    newPreLeft = pre[1:mid + 1]
-    newInorderLeft = inorder[:mid]
-    left = solve(N, newPreLeft, newInorderLeft)
-
-    newPreRight = pre[mid + 1:]
-    newInorderRight = inorder[mid + 1:]
-    right = solve(N, newPreRight, newInorderRight)
-
-    return [left] + [right] + [inorder[mid]]
-
-
-def getMid(pre, inorder):
     if not pre:
+        # return ""
         return
+
+    midIdx = getMidIdx(pre, inorder)
+
+    newPreLeft = pre[1:midIdx + 1]
+    newInorderLeft = inorder[:midIdx]
+
+    newPreRight = pre[midIdx + 1:]
+    newInorderRight = inorder[midIdx + 1:]
+
+    left = solve(N, newPreLeft, newInorderLeft)
+    right = solve(N, newPreRight, newInorderRight)
+    root = pre[0]
+
+    # return " ".join([left, right, root])
+    print(root, end=" ")
+
+
+def getMidIdx(pre, inorder):
+    assert pre
 
     mid = pre[0]
     return inorder.index(mid)
