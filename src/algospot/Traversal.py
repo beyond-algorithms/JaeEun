@@ -1,4 +1,5 @@
 from src.Test import Test as T
+import heapq
 
 
 def main():
@@ -9,15 +10,15 @@ def main():
         pre = list(map(int, input().strip().split()))
         inorder = list(map(int, input().strip().split()))
 
-        # print(solve(N, pre, inorder))
-        solve(N, pre, inorder)
-        print("")
+        print(solve(N, pre, inorder))
+        # solve(N, pre, inorder)
+        # print("")
 
 
 def solve(N, pre, inorder):
     if not pre:
-        # return ""
-        return
+        return ""
+        # return
 
     midIdx = getMidIdx(pre, inorder)
 
@@ -29,10 +30,10 @@ def solve(N, pre, inorder):
 
     left = solve(N, newPreLeft, newInorderLeft)
     right = solve(N, newPreRight, newInorderRight)
-    root = pre[0]
+    root = str(pre[0])
 
-    # return " ".join([left, right, root])
-    print(root, end=" ")
+    return " ".join(map(str.strip, [left, right, root])).strip()
+    # print(root, end=" ")
 
 
 def getMidIdx(pre, inorder):
