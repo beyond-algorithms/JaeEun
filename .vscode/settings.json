@@ -12,5 +12,27 @@
   "python.linting.pylintEnabled": true,
   "python.linting.pep8Enabled": false,
   "editor.tabSize": 4,
-  "editor.insertSpaces": true
+  "editor.insertSpaces": true,
+  "C_Cpp.errorSquiggles": "Disabled",
+  "files.associations": {
+    "*.html": "html",
+    "iosfwd": "cpp",
+    "string": "cpp",
+    "vector": "cpp",
+    "algorithm": "cpp",
+    "chrono": "cpp",
+    "limits": "cpp",
+    "__split_buffer": "cpp",
+    "ratio": "cpp",
+    "__hash_table": "cpp",
+    "bitset": "cpp",
+    "initializer_list": "cpp",
+    "iterator": "cpp",
+    "string_view": "cpp",
+    "unordered_set": "cpp",
+    "utility": "cpp",
+    "__bit_reference": "cpp",
+    "ostream": "cpp",
+    "__string": "cpp"
+  }
 }
