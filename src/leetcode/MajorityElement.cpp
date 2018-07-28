@@ -1,27 +1,25 @@
 class Solution {
-public:
+   public:
     int majorityElement(vector<int>& nums) {
         unordered_map<int, int> map;
         int len = nums.size();
-        
+
         for (int num : nums) {
             map[num]++;
-            
-            
-            if (map.find(num)->second > len/2) {
+
+            if (map.find(num)->second > len / 2) {
                 return num;
             }
         }
-        
+
         return -1;
     }
 };
 static const auto ______ = []() {
-	std::ios::sync_with_stdio(false);
-	cin.tie(nullptr);
-	return nullptr;
+    std::ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    return nullptr;
 }();
-
 
 //Boyer-Moore Voting Algorithm
 class Solution:

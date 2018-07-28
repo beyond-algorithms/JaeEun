@@ -1,89 +1,74 @@
+#include <algorithm>
 #include <iostream>
 #include <iterator>
-#include <vector>
-#include <algorithm>
+#include <map>
+#include <queue>
 #include <string>
+#include <vector>
 
 using namespace std;
 
-vector<vector<int> > adj;
-void makeGraph(const vector<string>& words) {
-    adj = vector<vector<int> >(26, vector<int>(26, 0));
+map<vector<int>, int> toSort;
 
-    for (int j = 1; j < words.size(); ++j) {
-        int i = j - 1;
-        int len = min(words[i].size(), words[j].size());
+void preCalc(int n) {
+    vector<int> perm(n);
+    for (int i = 0; i < n; ++i) {
+        perm[i] = i;
+    }
+    queue<vector<int> > q;
+    q.push(perm);
+    toSort[perm] = 0;
 
-        for (int k = 0; k < len; ++k) {
-            if (words[i][k] != words[j][k]) {
-                int a = words[i][k] - 'a';
-                int b = words[j][k] - 'a';
-                adj[a][b] = 1;
-                break;
+    while (!q.empty()) {
+        vector<int> here = q.front();
+        q.pop();
+        int cost = toSort[here];
+
+        for (int i = 0; i < n; ++i) {
+            for (int j = i + 2; j <= n; ++j) {
+                reverse(here.begin() + i, here.begin() + j);
+                if (toSort.count(here) == 0) {
+                    toSort[here] = cost + 1;
+                    q.push(here);
+                }
+                reverse(here.begin() + i, here.begin() + j);
             }
         }
     }
 }
-
-vector<int> seen, order;
-void dfs(int here) {
-    seen[here] = 1;
-    for (int there = 0; there < adj.size(); ++there) {
-        if (adj[here][there] && !seen[there]) {
-            dfs(there);
-        }
-    }
-    order.push_back(here);
-}
-
-vector<int> topologicalSort() {
-    int n = adj.size();
-    seen = vector<int>(n, 0);
-    order.clear();
+int bfs(const vector<int>& perm) {
+    int n = perm.size();
+    vector<int> fixed(n);
 
     for (int i = 0; i < n; ++i) {
-        if (!seen[i]) {
-            dfs(i);
-        }
-    }
-    reverse(order.begin(), order.end());
-
-    for (int i = 0; i < n; ++i) {
-        for (int j = i + 1; j < n; ++j) {
-            if (adj[order[j]][order[i]]) {
-                return vector<int>();
+        int smaller = 0;
+        for (int j = 0; j < n; ++j) {
+            if (perm[j] < perm[i]) {
+                ++smaller;
             }
         }
+        fixed[i] = smaller;
     }
 
-    return order;
+    return toSort[fixed];
 }
 
-int main(void) {
+int main() {
     int t;
     cin >> t;
-    while (t--) {
-        int size;
-        cin >> size;
-        vector<string> words;
-        for (int i = 0; i < size; ++i) {
-            string word;
-            cin >> word;
-            words.push_back(word);
-        }
-
-        makeGraph(words);
-
-        auto ret = topologicalSort();
-        if (ret.empty()) {
-            cout << "INVALID HYPOTHESIS" << endl;
-            continue;
-        }
-
-        for_each(ret.begin(), ret.end(), [](int& ch) { ch = ch + 'a'; });
-        copy(ret.begin(), ret.end(), ostream_iterator<char>(cout));
-        cout << endl;
+    for (int i = 0; i <= 8; i++) {
+        preCalc(i);
     }
 
-    return 0;
+    for (int i = 0; i < t; ++i) {
+        int N;
+        cin >> N;
+        vector<int> perm;
+        for (int j = 0; j < N; ++j) {
+            int k;
+            cin >> k;
+            perm.push_back(k);
+        }
+        cout << bfs(perm) << endl;
+    }
 }
