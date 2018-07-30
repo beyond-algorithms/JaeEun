@@ -55,6 +55,9 @@ int shift(const string& origin, const string& target) {
 }
 
 int main(void) {
+    std::ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
     int t;
     cin >> t;
     for (int i = 0; i < t; ++i) {
