@@ -108,4 +108,3 @@ void reconstruct(int capacity, int item, vector<string>& picked) {
         reconstruct(capacity - volume[item], item + 1, picked);
     }
 }
-
