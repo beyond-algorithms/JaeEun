@@ -51,6 +51,9 @@
     "stdexcept": "cpp",
     "type_traits": "cpp",
     "typeinfo": "cpp",
-    "istream": "cpp"
+    "istream": "cpp",
+    "__tree": "cpp",
+    "deque": "cpp",
+    "map": "cpp"
   }
 }
