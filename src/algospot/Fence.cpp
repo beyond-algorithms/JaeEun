@@ -2,9 +2,7 @@
 #include <vector>
 
 using namespace std;
-bool isValid(int left, int right, vector<int> &vec) {
-    return 0 <= left && right <= vec.size();
-}
+
 int getMiddleArea(int left, int right, vector<int> &vec) {
     int m = (left + right) / 2;
 
