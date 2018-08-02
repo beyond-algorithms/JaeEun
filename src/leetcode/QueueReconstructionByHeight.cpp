@@ -30,3 +30,21 @@ class Solution {
         return res;
     }
 };
+
+class Solution2 {
+   public:
+    auto compare = [](const pair<int, int> n1, const pair<int, int> n2) {
+        return n1.first > n2.first || ((n1.first == n2.first) && (n1.second < n2.second));
+    };
+
+    vector<pair<int, int>> reconstructQueue(vector<pair<int, int>>& people) {
+        vector<pair<int, int>> res;
+        sort(people.begin(), people.end(), compare);
+
+        for (auto& p : people) {
+            res.insert(res.begin() + p.second, p);
+        }
+
+        return res;
+    }
+};
