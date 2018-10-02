@@ -54,6 +54,9 @@
     "istream": "cpp",
     "__tree": "cpp",
     "deque": "cpp",
-    "map": "cpp"
+    "map": "cpp",
+    "__mutex_base": "cpp",
+    "streambuf": "cpp",
+    "tuple": "cpp"
   }
 }

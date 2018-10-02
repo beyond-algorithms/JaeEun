@@ -14,7 +14,7 @@ vector<int> getPartialLIS(int idx, const vector<int> &vec) {
     if (cache.find(idx) != cache.end()) {
         return cache[idx];
     }
-    cout << "T ";
+
     vector<int> res;
     int last = -1;
 
